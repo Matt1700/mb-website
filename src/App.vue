@@ -100,6 +100,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
+$breakpoints: (phone: 640px, tablet: 768px, desktop: 1024px) !default;
+
 html, body, #app{
   height: 100%;
   width: 100%;
@@ -261,6 +263,37 @@ p {
   .background {
     height: 100%;
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 670px) and (max-width: 800px) {
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column !important;
+
+    .divider {
+      height: 1px !important;
+      width: calc(100% - 40px) !important;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 }
 
