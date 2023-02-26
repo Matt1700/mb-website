@@ -41,13 +41,13 @@
 
         <img class="icon" src="./assets/gymbuddy.jpg" alt="GymBuddy icon">
 
-        <div class="divider"></div>
+        <div class="divider hide-phone"></div>
 
         <div class="text-container">
-          <h2 style="color: white">My personal project</h2>
+          <h2 style="color: #DDDDDD">My personal project</h2>
           <p style="max-width: 300px;">Workout tracker app made exclusively with Flutter, build for iOS and Android. The first beta is out on TestFlight for iPhones.</p>
-          <div class="action-button">
-            <p>Check it out on TestFlight <span style="margin-left: 10px;" class="material-symbols-outlined">trending_flat</span></p>
+          <div @click="openInNewTab('https://gymbuddytracker.web.app/')" class="action-button">
+            <p>Learn more <span style="margin-left: 10px;" class="material-symbols-outlined">trending_flat</span></p>
           </div>
         </div>
       </div>
@@ -274,25 +274,51 @@ p {
 }
 
 @media screen and (max-width: 670px) {
+  .page {
+    padding: 40px !important;
+  }
+
   h1 {
     font-size: 40px;
     line-height: 40px;
   }
 
+  .text-container {
+    max-width: 3000px !important;
+
+    p {
+      max-width: 3000px !important;
+    }
+  }
+
+  .hide-phone {
+    display: none;
+  }
+
   .row {
     display: flex;
     flex-direction: column !important;
+    align-items: start !important;
 
     .divider {
       height: 1px !important;
-      width: calc(100% - 40px) !important;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      width: calc(100%) !important;
+      align-self: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     .link {
       margin-top: 20px;
       margin-bottom: 20px;
+    }
+
+    .icon {
+      width: 100px !important;
+      height: 100px !important;
+      border-radius: 30px !important;
+      align-self: center;
+      margin-bottom: 30px;
     }
   }
 }
